@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Гостевой дом «ДомЗайцев» — Арасланово | аренда дома целиком</title>
+<style>
+:root{
+  --green:#2f5233; --dark:#1e3524; --accent:#d99a3d; --bg:#f6f3ea;
+  --text:#2a2a24; --card:#ffffff; --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+header{background:var(--dark);color:#fff;padding:14px 0}
+header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.logo{font-size:21px;font-weight:700}
+.logo span{color:var(--accent)}
+header nav{display:flex;gap:20px}
+header nav a{color:#dfe8d9;text-decoration:none;font-size:15px}
+header nav a:hover{color:#fff}
+.header-phone{font-weight:700;color:#fff;text-decoration:none;font-size:16px}
+
+.top-banner{background:var(--dark)}
+.top-banner img{width:100%;display:block;max-height:420px;object-fit:cover}
+.hero{background:linear-gradient(rgba(30,53,36,.9),rgba(30,53,36,.82)),linear-gradient(135deg,#2f5233 0%,#1e3524 100%);padding:56px 0;color:#fff;text-align:center}
+.hero h1{font-size:36px;margin-bottom:12px}
+.hero p{font-size:18px;color:#dfe8d9;max-width:660px;margin:0 auto 26px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 34px;border-radius:var(--radius);text-decoration:none;font-weight:700;font-size:17px;border:none;cursor:pointer;transition:.2s}
+.btn:hover{background:#c3862c}
+.btn-vk{display:inline-block;background:#4a76a8;color:#fff;padding:14px 30px;border-radius:var(--radius);text-decoration:none;font-weight:700;font-size:16px;margin-left:10px}
+.btn-vk:hover{background:#3d6391}
+.hero-badges{display:flex;gap:30px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+.hero-badges div{font-size:14px;color:#dfe8d9}
+.hero-badges b{display:block;font-size:22px;color:var(--accent)}
+
+section{padding:58px 0}
+h2{font-size:28px;text-align:center;margin-bottom:10px;color:var(--dark)}
+.section-sub{text-align:center;color:#6f7a64;margin-bottom:38px;font-size:16px}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.gallery figure{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 14px rgba(30,53,36,.09)}
+.gallery img{width:100%;display:block;background:#dde5d6;aspect-ratio:4/3;object-fit:cover}
+.gallery figcaption{padding:12px 16px;font-size:14px;color:#5c6653}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.list-card{background:var(--card);border-radius:var(--radius);padding:26px;box-shadow:0 4px 14px rgba(30,53,36,.09)}
+.list-card h3{color:var(--dark);font-size:19px;margin-bottom:14px}
+.list-card ul{list-style:none}
+.list-card li{padding:7px 0 7px 28px;position:relative;font-size:15px}
+.list-card li::before{content:"✔";position:absolute;left:0;color:var(--accent);font-weight:700}
+
+.exp{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.exp .card{background:var(--card);border-radius:var(--radius);padding:24px;box-shadow:0 4px 14px rgba(30,53,36,.09);transition:.2s}
+.exp .card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(30,53,36,.14)}
+.exp .icon{font-size:32px;margin-bottom:10px}
+.exp h3{font-size:17px;margin-bottom:6px;color:var(--dark)}
+.exp p{font-size:14px;color:#6f7a64}
+
+.price-band{background:var(--dark);color:#fff;border-radius:var(--radius);padding:34px;text-align:center;max-width:640px;margin:0 auto;box-shadow:0 8px 24px rgba(30,53,36,.25)}
+.price-band .big{font-size:40px;font-weight:800;color:var(--accent)}
+.price-band p{color:#dfe8d9;margin-top:8px;font-size:15px}
+.price-extras{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;max-width:640px;margin:18px auto 0}
+.price-extras div{background:var(--card);border-radius:12px;padding:14px 10px;text-align:center;font-size:14px;color:#5c6653;box-shadow:0 4px 14px rgba(30,53,36,.09)}
+.price-extras b{display:block;color:var(--dark);font-size:16px;margin-bottom:4px}
+.price-note{text-align:center;max-width:640px;margin:18px auto 0;font-size:14px;color:#6f7a64}
+
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.review{background:var(--card);border-radius:var(--radius);padding:24px;box-shadow:0 4px 14px rgba(30,53,36,.09)}
+.review .stars{color:var(--accent);margin-bottom:10px}
+.review p{font-size:14px;color:#4d5647;margin-bottom:12px;font-style:italic}
+.review .name{font-weight:700;font-size:14px;color:var(--dark)}
+.rating-line{text-align:center;margin-bottom:30px;font-size:16px}
+.rating-line b{color:var(--accent);font-size:20px}
+
+.order{background:linear-gradient(rgba(30,53,36,.93),rgba(30,53,36,.93)),linear-gradient(135deg,#24401f 0%,#1e3524 100%);color:#fff}
+.order h2{color:#fff}
+.order .section-sub{color:#c9d4c0}
+.order-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.order-info p{margin-bottom:14px;color:#dfe8d9;font-size:15px}
+.order-info b{color:var(--accent)}
+form{background:var(--card);border-radius:var(--radius);padding:28px;color:var(--text)}
+form label{display:block;font-size:14px;font-weight:600;margin:14px 0 6px;color:var(--dark)}
+form input,form select,form textarea{width:100%;padding:12px;border:1px solid #cdd7c4;border-radius:10px;font-size:15px;font-family:inherit;background:#fff}
+form input:focus,form select:focus,form textarea:focus{outline:2px solid var(--accent)}
+.dates{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form .btn{width:100%;margin-top:18px}
+.form-note{font-size:12px;color:#8a9380;margin-top:10px;text-align:center}
+
+footer{background:#162418;color:#c9d4c0;padding:26px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--accent);text-decoration:none}
+
+@media(max-width:820px){
+  .hero h1{font-size:27px}
+  .two-col,.order-grid{grid-template-columns:1fr}
+  header nav{display:none}
+  .btn-vk{margin-left:0;margin-top:10px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">Дом<span>Зайцев</span> 🐐</div>
+    <nav>
+      <a href="#house">О доме</a>
+      <a href="#rest">Отдых</a>
+      <a href="#price">Цены</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#order">Бронирование</a>
+    </nav>
+    <a class="header-phone" href="tel:+79220989640">+7 922 098-96-40</a>
+  </div>
+</header>
+
+<div class="top-banner">
+  <img src="dom-zaitsev.jpg" alt="Гостевой дом «ДомЗайцев» — с. Арасланово, Нязепетровский округ, Челябинская область">
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Весь дом — только ваш!</h1>
+    <p>Гостевой дом «ДомЗайцев» в селе Арасланово: бревенчатый дом 70 м² целиком, баня, мангал, лошади и козье молоко — настоящий отдых в деревне для семьи и компании.</p>
+    <a class="btn" href="#order">Забронировать дом</a>
+    <a class="btn-vk" href="https://vk.com/domzaicev" target="_blank">Мы во ВКонтакте</a>
+    <div class="hero-badges">
+      <div><b>до 5 гостей</b>весь дом целиком</div>
+      <div><b>баня</b>и зона с костром</div>
+      <div><b>4,3 ★</b>оценка на Яндекс.Картах</div>
+    </div>
+  </div>
+</div>
+
+<section id="house">
+  <div class="wrap">
+    <h2>Дом и территория</h2>
+    <p class="section-sub">Одноэтажный бревенчатый дом около 70 м² — снимаете его целиком, только для вашей компании</p>
+    <div class="gallery">
+      <figure>
+        <img src="sam-dom.jpg" alt="Бревенчатый дом «ДомЗайцев» с голубой крышей на закате" loading="lazy">
+        <figcaption>Ваш дом на время отдыха — бревенчатый, с голубой крышей</figcaption>
+      </figure>
+      <figure>
+        <img src="kuhnya.jpg" alt="Кухня с полным набором посуды и печью" loading="lazy">
+        <figcaption>Кухня — вся посуда, плита и холодильник на месте</figcaption>
+      </figure>
+      <figure>
+        <img src="na-kuhne.jpg" alt="Обеденная зона на кухне-гостиной" loading="lazy">
+        <figcaption>Обеденная зона — ужины всей семьёй</figcaption>
+      </figure>
+      <figure>
+        <img src="zalo.jpg" alt="Гостиная с мягким диваном и телевизором" loading="lazy">
+        <figcaption>Гостиная с диваном и телевизором</figcaption>
+      </figure>
+      <figure>
+        <img src="komnata.jpg" alt="Спальная комната с чистым постельным бельём" loading="lazy">
+        <figcaption>Спальня — бельё и полотенца уже постелены</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="rest" style="background:#eef0e4">
+  <div class="wrap">
+    <h2>Что вас ждёт</h2>
+    <p class="section-sub">Всё для спокойного деревенского отдыха — от бани до домашнего сыра</p>
+    <div class="exp">
+      <div class="card"><div class="icon">🛌</div><h3>5 спальных мест</h3><p>Двуспальная кровать, двуспальный диван и односпальная кровать — в двух изолированных комнатах</p></div>
+      <div class="card"><div class="icon">🔥</div><h3>Баня и кострище</h3><p>Деревенская баня во дворе, мангал и отдельное место для посиделок у костра под навесом</p></div>
+      <div class="card"><div class="icon">🐎</div><h3>Лошади и животные</h3><p>Рядом целый табун лошадей, во дворе — козочки. Детям особенно нравится</p></div>
+      <div class="card"><div class="icon">🥛</div><h3>Молоко и сыр</h3><p>Свежее козье молоко и домашний козий сыр от хозяев — попробуйте на завтрак</p></div>
+      <div class="card"><div class="icon">🍲</div><h3>Домашняя еда</h3><p>Хозяйка готовит домашние обеды — можно отдыхать и не готовить совсем</p></div>
+      <div class="card"><div class="icon">🚗</div><h3>Гараж во дворе</h3><p>Место для нескольких автомобилей прямо на территории, за забором</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="inside">
+  <div class="wrap">
+    <h2>В доме всё готово к приезду</h2>
+    <p class="section-sub">Приезжайте с чемоданом — всё остальное на месте</p>
+    <div class="two-col">
+      <div class="list-card">
+        <h3>В доме</h3>
+        <ul>
+          <li>Кухня с плитой и холодильником</li>
+          <li>Санузел с душевой кабиной и туалетом прямо в доме</li>
+          <li>Горячая вода и отопление</li>
+          <li>Телевизор</li>
+          <li>Постельное бельё, полотенца, средства гигиены</li>
+          <li>Сетки на всех окнах — комары остаются на улице</li>
+        </ul>
+      </div>
+      <div class="list-card">
+        <h3>На территории</h3>
+        <ul>
+          <li>Гараж для нескольких автомобилей</li>
+          <li>Мангал и место для посиделок у костра</li>
+          <li>Навес со столом для отдыха на воздухе</li>
+          <li>Деревенская баня</li>
+          <li>Тишина, природа и звёздное небо ночью</li>
+        </ul>
+      </div>
+    </div>
+    <div class="list-card" style="margin-top:22px;max-width:640px;margin-inline:auto;background:#eef4e7">
+      <h3>📶 Цифровой детокс</h3>
+      <p style="font-size:14px;color:#5c6653">В доме нет Wi-Fi — и это часть отдыха. Устойчиво ловят МегаФон и Теле2. Хорошая причина побыть наедине с близкими, а не с новостями.</p>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <h2>Цены</h2>
+    <p class="section-sub">Снимаете весь дом целиком — никто больше в нём не живёт</p>
+    <div class="price-band">
+      <div class="big">5 000 ₽ / сутки</div>
+      <p>за весь дом (до 5 гостей — примерно 1 000 ₽ с человека)</p>
+      <p>Баня, домашняя еда и молоко — по договорённости при бронировании</p>
+    </div>
+    <div class="price-extras">
+      <div><b>Баня</b>500 ₽ за одну топку</div>
+      <div><b>Питомцы</b>+500 ₽ в сутки</div>
+      <div><b>Залог</b>5 000 ₽, возвращаем при выезде</div>
+      <div><b>Большая компания</b>матрасы/спальники — без доплаты</div>
+    </div>
+    <p class="price-note">Заезд с 10:00, выезд до 19:00 (время согласуем индивидуально). В доме не курят и не шумят ночью — мы за спокойный отдых.</p>
+  </div>
+</section>
+
+<section id="reviews" style="background:#eef0e4">
+  <div class="wrap">
+    <h2>Отзывы гостей</h2>
+    <p class="rating-line"><b>4,3 ★</b> — оценка на Яндекс.Картах</p>
+    <div class="reviews">
+      <div class="review"><div class="stars">★★★★★</div><p>«Удивительное место, где можно погрузиться в атмосферу уюта и дружелюбия. Владельцы очень дружелюбны и отзывчивы, всегда готовы ответить на вопросы. Отлично провели время всей семьёй. Рекомендую всем!»</p><div class="name">Алексей Николаевич</div></div>
+      <div class="review"><div class="stars">★★★★★</div><p>«Приезжали на неделю: попробовали козий сыр и встретили целый табун лошадей. Хозяева позаботились даже о мелочах вроде пантенола от комаров. Всю неделю не готовили — хозяйка готовила очень вкусную домашнюю еду. Нареканий нет!»</p><div class="name">Аля П.</div></div>
+      <div class="review"><div class="stars">★★★★★</div><p>«Всё понравилось, всё супер!»</p><div class="name">Руслан Х.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="order" class="order">
+  <div class="wrap">
+    <div class="order-grid">
+      <div class="order-info">
+        <h2>Забронировать дом</h2>
+        <p class="section-sub" style="text-align:left">Оставьте заявку — хозяева перезвонят и подтвердят свободные даты</p>
+        <p><b>Адрес:</b> с. Арасланово, ул. Горная, 5 (Нязепетровский округ, Челябинская обл.)</p>
+        <p><b>Телефон:</b> +7 922 098-96-40 — звоните круглосуточно</p>
+        <p><b>ВКонтакте:</b> vk.com/domzaicev — фото и свежие новости в нашей группе</p>
+        <p><b>Бронирование:</b> по телефону или через заявку на сайте — ответим в ближайшее время</p>
+      </div>
+      <form id="bookForm">
+        <label for="name">Ваше имя *</label>
+        <input id="name" name="name" required placeholder="Как к вам обращаться">
+        <label for="phone">Телефон *</label>
+        <input id="phone" name="phone" type="tel" required placeholder="+7 (___) ___-__-__">
+        <div class="dates">
+          <div><label for="in">Дата заезда *</label><input id="in" name="checkin" type="date" required></div>
+          <div><label for="out">Дата выезда *</label><input id="out" name="checkout" type="date" required></div>
+        </div>
+        <label for="guests">Гостей</label>
+        <select id="guests" name="guests">
+          <option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option>
+        </select>
+        <label for="comment">Комментарий</label>
+        <textarea id="comment" name="comment" rows="2" placeholder="Например: с детьми, нужна баня и домашний ужин"></textarea>
+        <button class="btn" type="submit">Отправить заявку на бронь</button>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Гостевой дом «ДомЗайцев» · с. Арасланово, ул. Горная, 5</div>
+    <div><a href="tel:+79220989640">+7 922 098-96-40</a> · <a href="https://vk.com/domzaicev" target="_blank">vk.com/domzaicev</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('bookForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Заявка на бронь отправлена! Хозяева перезвонят вам для подтверждения дат.\n(в демо данные никуда не уходят — после запуска каждая заявка будет падать хозяевам в таблицу и на почту)');
+  this.reset();
+});
+</script>
+
+</body>
+</html>
